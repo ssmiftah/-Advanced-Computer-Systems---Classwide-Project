@@ -1,0 +1,30 @@
+== latency -> p2-memory/data/raw/final/latency
+== pattern -> p2-memory/data/raw/final/pattern
+== rwmix -> p2-memory/data/raw/final/rwmix
+== intensity -> p2-memory/data/raw/final/intensity
+== kernel -> p2-memory/data/raw/final/kernel
+== tlb -> p2-memory/data/raw/final/tlb
+== pitfall -> p2-memory/data/raw/final/pitfall
+intensity/loaded_latency.csv: 60 raw rows -> 12 points
+intensity/mlp.csv: 300 raw rows -> 60 points
+kernel/kernel.csv: 1480 raw rows -> 148 points
+latency/latency.csv: 1287 raw rows -> 117 points
+pattern/bandwidth.csv: 320 raw rows -> 64 points
+pattern/latency.csv: 264 raw rows -> 24 points
+pitfall/p1_bandwidth.csv: 25 raw rows -> 5 points
+pitfall/p1_latency.csv: 33 raw rows -> 3 points
+pitfall/p2_nowarm.csv: 20 raw rows -> 4 points
+pitfall/p3_pinning.csv: 20 raw rows -> 4 points
+rwmix/bandwidth.csv: 70 raw rows -> 14 points
+rwmix/loaded_latency.csv: 125 raw rows -> 25 points
+tlb/tlb.csv: 500 raw rows -> 100 points
+wrote p2-memory/figures/final/latency_working_set.png
+wrote p2-memory/figures/final/latency_pattern_stride.png
+wrote p2-memory/figures/final/bandwidth_pattern_stride.png
+wrote p2-memory/figures/final/bandwidth_rwmix.png
+wrote p2-memory/figures/final/loaded_latency_rwmix.png
+wrote p2-memory/figures/final/intensity_mlp.png
+wrote p2-memory/figures/final/intensity_loaded_latency.png
+wrote p2-memory/figures/final/kernel_cache_miss.png
+wrote p2-memory/figures/final/tlb_miss_impact.png
+wrote p2-memory/figures/final/pitfalls.png

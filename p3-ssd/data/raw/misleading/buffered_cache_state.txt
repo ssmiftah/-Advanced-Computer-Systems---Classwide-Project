@@ -1,0 +1,6 @@
+== after warm-up 2026-10-23T21:37:51-04:00
+RES  PAGES SIZE FILE
+ 1G 262272  32G p3-ssd/testfile.dat
+== after buffered runs 2026-10-23T21:41:38-04:00
+RES  PAGES SIZE FILE
+ 1G 262272  32G p3-ssd/testfile.dat

@@ -1,0 +1,35 @@
+make: Nothing to be done for 'all'.
+  echo "peakflops: gcc -O3 -Wall -Wextra -std=gnu17 -march=znver5"; } > reports/flags.txt
+uv run python scripts/vec_check.py
+wrote reports/vec_summary.{csv,md}, reports/vec_snippets.md
+(optional, clang remarks: make clang-reports)
+[bandwidth] -> p1-simd/data/raw/final/bandwidth
+[speedup] -> p1-simd/data/raw/final/speedup/speedup.csv
+[locality] -> p1-simd/data/raw/final/locality/locality.csv
+[align_tail] -> p1-simd/data/raw/final/align_tail/align_tail.csv
+[stride_gather] -> p1-simd/data/raw/final/stride_gather/stride_gather.csv
+[dtype] -> p1-simd/data/raw/final/dtype/dtype.csv
+align_tail: 87210 samples -> 1925 configs
+dtype: 9000 samples -> 200 configs
+locality: 22950 samples -> 510 configs
+speedup: 12420 samples -> 276 configs
+stride_gather: 17010 samples -> 378 configs
+wrote p1-simd/figures/final/speedup_vs_size.png/.pdf
+wrote p1-simd/figures/final/speedup_gflops.png/.pdf
+wrote p1-simd/figures/final/speedup_cycles.png/.pdf
+wrote p1-simd/figures/final/locality_gibs.png/.pdf
+wrote p1-simd/figures/final/locality_cycles.png/.pdf
+wrote p1-simd/figures/final/locality_gflops.png/.pdf
+p1-simd/scripts/plot_align_tail.py:37: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  axs[0][0].legend(fontsize=6)
+p1-simd/scripts/plot_align_tail.py:37: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  axs[0][0].legend(fontsize=6)
+wrote p1-simd/figures/final/align_f32.png/.pdf
+wrote p1-simd/figures/final/tail_f32.png/.pdf
+wrote p1-simd/figures/final/align_f64.png/.pdf
+wrote p1-simd/figures/final/tail_f64.png/.pdf
+wrote p1-simd/figures/final/stride_cycles.png/.pdf
+wrote p1-simd/figures/final/stride_gibs.png/.pdf
+wrote p1-simd/figures/final/dtype_gflops.png/.pdf
+wrote p1-simd/figures/final/dtype_speedup.png/.pdf
+wrote p1-simd/figures/final/roofline.png/.pdf

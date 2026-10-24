@@ -1,0 +1,40 @@
+; Base fio job for Project 3. Every knob comes from an FIO_* environment
+; variable that scripts/common.sh:run_fio exports (and records next to the data).
+; The target is ALWAYS a regular test file inside p3-ssd/ (never a block device);
+; allow_file_create=0 makes fio fail instead of creating anything by accident.
+[global]
+filename=${FIO_TESTFILE}
+allow_file_create=0
+ioengine=${FIO_IOENGINE}
+direct=${FIO_DIRECT}
+rw=${FIO_RW}
+rwmixread=${FIO_RWMIX}
+bs=${FIO_BS}
+iodepth=${FIO_IODEPTH}
+numjobs=${FIO_NUMJOBS}
+; region of the file that is touched: [offset, offset+size)
+offset=${FIO_OFFSET}
+size=${FIO_SPAN}
+; reads: time_based=1 (io_size ignored).  writes: time_based=0 + io_size = hard byte cap,
+; runtime = upper time limit (see scripts/common.sh W_*). fio counts ramp IOs toward io_size.
+time_based=${FIO_TIMEBASED}
+io_size=${FIO_IOSIZE}
+runtime=${FIO_RUNTIME}
+ramp_time=${FIO_RAMP}
+group_reporting=1
+; 1 = drop this file's page cache before the job (fio default). Only the buffered pitfall sets 0.
+invalidate=${FIO_INVALIDATE}
+cpus_allowed=${FIO_CPUS}
+; data pattern: incompressible random buffers by default (FIO_COMPRESS=0).
+; refill_buffers: fresh random data for every IO (not a repeated buffer).
+refill_buffers=1
+buffer_compress_percentage=${FIO_COMPRESS}
+randrepeat=0
+; aligned random offsets (blockalign defaults to bs); allow revisiting blocks
+norandommap=1
+; latency stats: full percentile list (also json+ histogram bins)
+percentile_list=1:5:10:25:50:75:90:95:99:99.5:99.9:99.95:99.99:99.999
+clat_percentiles=1
+disable_slat=0
+
+[${FIO_NAME}]

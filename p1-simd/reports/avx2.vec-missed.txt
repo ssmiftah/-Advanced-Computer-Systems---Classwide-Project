@@ -1,0 +1,48 @@
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const float
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const double
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const float
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const double
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const float
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const double
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const float
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const double
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const float
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const double
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const float
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:44: missed: not vectorized: no vectype for stmt: _7 = *_6;
+ scalar_type: const double
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.

@@ -1,0 +1,4 @@
+iodepth randread 128
+iodepth randwrite 32
+numjobs randread 64
+numjobs randwrite 16

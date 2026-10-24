@@ -1,0 +1,27 @@
+/* ref.c - scalar reference implementations (ref_*), the correctness oracle.
+ * Always compiled with -O2 -fno-tree-vectorize -fno-tree-slp-vectorize -ffp-contract=off,
+ * baseline ISA, regardless of the build under test (see Makefile). */
+#include "kernels.h"
+
+#ifdef __clang__
+#define KATTR __attribute__((noinline))
+#else
+#define KATTR __attribute__((noinline, noipa))
+#endif
+#define KPFX ref_
+#define CATX3(a, b, c) CAT3_(a, b, c)
+#define CAT3_(a, b, c) a##b##_##c
+
+#define TYP float
+#define SFX f32
+#include "kernels_impl.inc"
+#undef TYP
+#undef SFX
+#define TYP double
+#define SFX f64
+#include "kernels_impl.inc"
+#undef TYP
+#undef SFX
+#define TYP uint32_t
+#define SFX i32
+#include "kernels_impl.inc"

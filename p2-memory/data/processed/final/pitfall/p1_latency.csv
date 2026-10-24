@@ -1,0 +1,4 @@
+size_bytes,pattern,stride,pages,ns_per_access_median,ns_per_access_q1,ns_per_access_q3,ns_per_access_std,ns_per_access_min,ns_per_access_max,thp_frac_median,thp_frac_q1,thp_frac_q3,thp_frac_std,thp_frac_min,thp_frac_max,core_ghz_median,core_ghz_q1,core_ghz_q3,core_ghz_std,core_ghz_min,core_ghz_max,n
+4194304,random,64,thp,7.9138,7.9113500000000005,7.918950000000001,0.007653270245754192,7.901,7.9288,1.0,1.0,1.0,0.0,1.0,1.0,5.704,5.703,5.704,0.0019116865471476305,5.698,5.705,11
+16777216,random,64,thp,8.2965,8.292950000000001,8.29895,0.016154706603790637,8.2864,8.3457,1.0,1.0,1.0,0.0,1.0,1.0,5.695,5.693,5.698,0.01026999159068402,5.663,5.7,11
+1073741824,random,64,thp,99.0546,98.9079,99.61725,0.4794697389256728,98.798,100.195,1.0,1.0,1.0,0.0,1.0,1.0,5.71,5.708,5.7115,0.0040451991747795365,5.7,5.713,11

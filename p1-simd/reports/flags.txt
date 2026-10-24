@@ -1,0 +1,17 @@
+gcc (GCC) 16.2.1 20260810
+clang version 23.1.3
+
+scalar: gcc -O3 -Wall -Wextra -std=gnu17 -fno-tree-vectorize -fno-tree-slp-vectorize -c kernels.c
+scalar_znver5: gcc -O3 -Wall -Wextra -std=gnu17 -march=znver5 -fno-tree-vectorize -fno-tree-slp-vectorize -c kernels.c
+sse: gcc -O3 -Wall -Wextra -std=gnu17  -c kernels.c
+avx2: gcc -O3 -Wall -Wextra -std=gnu17 -mavx2 -mfma -c kernels.c
+znver5: gcc -O3 -Wall -Wextra -std=gnu17 -march=znver5 -c kernels.c
+znver5_pv512: gcc -O3 -Wall -Wextra -std=gnu17 -march=znver5 -mprefer-vector-width=512 -c kernels.c
+sse_fm: gcc -O3 -Wall -Wextra -std=gnu17  -fassociative-math -fno-signed-zeros -fno-trapping-math -c kernels.c
+avx2_fm: gcc -O3 -Wall -Wextra -std=gnu17 -mavx2 -mfma -fassociative-math -fno-signed-zeros -fno-trapping-math -c kernels.c
+znver5_fm: gcc -O3 -Wall -Wextra -std=gnu17 -march=znver5 -fassociative-math -fno-signed-zeros -fno-trapping-math -c kernels.c
+znver5_pv512_fm: gcc -O3 -Wall -Wextra -std=gnu17 -march=znver5 -mprefer-vector-width=512 -fassociative-math -fno-signed-zeros -fno-trapping-math -c kernels.c
+harness: gcc -O2 -Wall -Wextra -std=gnu17
+reference: gcc -O2 -Wall -Wextra -std=gnu17 -fno-tree-vectorize -fno-tree-slp-vectorize -ffp-contract=off
+membw: gcc -O3 -Wall -Wextra -std=gnu17 -march=znver5 -mprefer-vector-width=512
+peakflops: gcc -O3 -Wall -Wextra -std=gnu17 -march=znver5

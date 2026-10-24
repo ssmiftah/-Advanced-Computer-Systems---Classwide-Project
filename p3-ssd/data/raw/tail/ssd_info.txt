@@ -1,0 +1,45 @@
+# SSD / filesystem info
+date: 2026-10-23T21:14:39-04:00
+model: KXG80ZNV1T02 REV2 KIOXIA
+firmware_rev: APGA4102
+serial: (omitted)
+nvme transport/state: pcie live
+temp_c: 55.9
+test file: p3-ssd/testfile.dat  size=32G
+filesystem source: /dev/nvme0n1p7
+--- df -hT
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/nvme0n1p7 ext4  412G  375G   16G  96% /home
+--- findmnt
+TARGET SOURCE         FSTYPE OPTIONS
+/home  /dev/nvme0n1p7 ext4   rw,noatime
+--- block queue
+scheduler: [none] mq-deadline kyber adios bfq 
+nr_requests: 1023
+rotational: 0
+logical_block_size: 512
+physical_block_size: 512
+read_ahead_kb: 256
+write_cache: write back
+--- nvme smart-log (optional, needs privileges)
+grep: warning: stray \ before x
+/dev/nvme0: Permission denied
+[1mOptions:[0m
+  [  --namespace-id=<NUM>, -n <NUM> ]   --- (optional) desired namespace
+  [  --raw-binary, -b ]                 --- output in binary format
+[1mGlobal options:[0m
+  [  --verbose, -v ]                    --- Increase output verbosity
+  [  --quiet ]                          --- suppress informational output
+  [  --output-format=<FMT>, -o <FMT> ]  --- Output format: 
+                                            normal|json|binary
+  [  --timeout=<NUM> ]                  --- timeout value, in milliseconds
+  [  --dry-run ]                        --- show command instead of 
+                                            executing
+  [  --no-retries ]                     --- disable retry logic on errors
+  [  --no-ioctl-probing ]               --- disable 64-bit IOCTL support 
+                                            probing
+  [  --output-format-version=<NUM> ]    --- output format version: 1|2
+  [  --set-options=<KEY=VALUE> ]        --- set a libnvme library option 
+                                            (key=value[,key=value,...]);
+--- fio
+fio-3.42

@@ -1,0 +1,12 @@
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
+src/kernels_impl.inc:58:26: missed: couldn't vectorize loop
+src/kernels_impl.inc:58:26: missed: no stmts to vectorize.
